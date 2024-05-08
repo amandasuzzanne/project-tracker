@@ -1,154 +1,160 @@
 {
-    "projects": [
-      {
-        "id": 1,
-        "name": "Web Developement",
-        "institution": "Barclays bank",
-        "implementation_date": "2024-05-10",
-        "status": "current"
-      },
-      {
-        "id": 2,
-        "name": "Game Developer",
-        "institution": "Wells Fargo",
-        "implementation_date": "2024-06-15",
-        "status": "current"
-      },
-      {
-        "id": 3,
-        "name": "UI/UX Design",
-        "institution": "Standard Chartered",
-        "implementation_date": "2024-07-20",
-        "status": "current"
-      },
-      {
-        "id":4,
-        "name":"Economic Development",
-        "institution":"Goldman Sachs",
-        "implementation_date":"2024-08-25",
-        "status":"current"
-      },
-      {
-        "id":5,
-        "name":"Frontend Developer",
-        "institution":"JPMorgan Chase & Co",
-        "implementation_date":"2024-09-30",
-        "status":"current"
-      },
-      {
-        "id":6,
-        "name":"System Design",
-        "institution":"BNP Paribas",
-        "implementation_date":"2024-10-05",
-        "status":"current"
-      },
-      {
-        "id":7,
-        "name":"Bankend Developer",
-        "institution":"Credit Mutuel",
-        "implementation_date":"2024-11-10",
-        "status":"current"
-      }
-    ],
-    "tasks": [
-      {
-        "id": 1,
-        "projectId": 1,
-        "name": "Web Developement",
-        "assigned": "Amanda",
-        "status": "In Progress"
-      },
-      {
-        "id": 2,
-        "projectId": 1,
-        "name": "Frontend Developer",
-        "assigned": "Soraqhah",
-        "status": "In Progress"
-      },
-      {
-        "id": 3,
-        "projectId": 2,
-        "name": "System Design",
-        "assigned": "Stella",
-        "status": "Pending"
-      },
-      {
-        "id": 4,
-        "projectId": 2,
-        "name": "System Design",
-        "assigned": "Dennis",
-        "status": "Pending"
-      },
-      {
-        "id": 5,
-        "projectId": 3,
-        "name": "Frontend Developer",
-        "assigned": "Mark",
-        "status": "Completed"
-      },
-      {
-        "id": 6,
-        "projectId": 3,
-        "name": "Backend Developer",
-        "assigned": "Amanda",
-        "status": "Completed"
-      },
-      {
-        "id": 7,
-        "projectId": 4,
-        "name": "Deployment",
-        "assigned": "Dennis",
-        "status": "In Progress"
-      },
-      {
-        "id": 8,
-        "projectId": 4,
-        "name": "Backend Developer",
-        "assigned": "Stella",
-        "status": "In Progress"
-      },
-      {
-        "id":9,
-        "projectId":5,
-        "name":"Testing",
-        "assigned":"Mark",
-        "status":"Pending"
-      },
-      {
-        "id":10,
-        "projectId":5,
-        "name":"Maintenance & Updates",
-        "assigned":"Amanda",
-        "status":"Pending"
-      },
-      {
-        "id":11,
-        "projectId":6,
-        "name":"Frontend Developer",
-        "assigned":"Stella",
-        "status":"Completed"
-      },
-      {
-        "id":12,
-        "projectId":6,
-        "name":"Backend Developer",
-        "assigned":"Dennis",
-        "status":"Completed"
-      },
-      {
-        "id":13,
-        "projectId":7,
-        "name":"Web Developer",
-        "assigned":"Stella",
-        "status":"In Progress"
-      },
-      {
-        "id":14,
-        "projectId":7,
-        "name":"Deployment",
-        "assigned":"Amanda",
-        "status":"In Progress"
-      }
-    ]
-  }
-  
+  "projects": [
+    {
+      "id": 1,
+      "name": "Web Development",
+      "institution": "KCB Bank",
+      "implementation_date": "2024-05-10",
+      "status": "current"
+    },
+    {
+      "id": 2,
+      "name": "Mobile Development",
+      "institution": "NCBA Bank",
+      "implementation_date": "2024-06-15",
+      "status": "current"
+    },
+    {
+      "id": 3,
+      "name": "Network Configuration",
+      "institution": "Tribe Logistics",
+      "implementation_date": "2024-07-20",
+      "status": "current"
+    },
+    {
+      "id":4,
+      "name":"Hardware Installation",
+      "institution":"KEMRI",
+      "implementation_date":"2024-08-25",
+      "status":"current"
+    },
+    {
+      "id":5,
+      "name":"Software Installation",
+      "institution":"Lean Ventures",
+      "implementation_date":"2024-09-30",
+      "status":"completed"
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "projectId": 1,
+      "name": "Web Design",
+      "assigned": "Mark",
+      "status": "Completed"
+    },
+    {
+      "id": 2,
+      "projectId": 1,
+      "name": "Frontend Development",
+      "assigned": "Soraqhah",
+      "status": "Completed"
+    },
+    {
+      "id": 3,
+      "projectId": 1,
+      "name": "Backend Development",
+      "assigned": "Amanda",
+      "status": "In Progress"
+    },
+    {
+      "id": 4,
+      "projectId": 1,
+      "name": "Testing",
+      "assigned": "Mark",
+      "status": "Pending"
+    },
+    {
+      "id": 5,
+      "projectId": 1,
+      "name": "Deployment",
+      "assigned": "Dennis",
+      "status": "Pending"
+    },
+    {
+      "id": 6,
+      "projectId": 1,
+      "name": "Maintenance",
+      "assigned": "Stella",
+      "status": "Pending"
+    },
+    {
+      "id": 7,
+      "projectId": 2,
+      "name": "Web Design",
+      "assigned": "Mark",
+      "status": "Completed"
+    },
+    {
+      "id": 8,
+      "projectId": 2,
+      "name": "Frontend Development",
+      "assigned": "Dennis",
+      "status": "Completed"
+    },
+    {
+      "id":9,
+      "projectId":2,
+      "name":"Backend Development",
+      "assigned":"Amanda",
+      "status":"Completed"
+    },
+    {
+      "id":10,
+      "projectId":2,
+      "name":"Testing",
+      "assigned":"Amanda",
+      "status":"Completed"
+    },
+    {
+      "id":11,
+      "projectId":2,
+      "name":"Deployment",
+      "assigned":"Stella",
+      "status":"Completed"
+    },
+    {
+      "id":12,
+      "projectId":2,
+      "name":"Maintenance",
+      "assigned":"Soraqhah",
+      "status":"In Progress"
+    },
+    {
+      "id":13,
+      "projectId":3,
+      "name":"Router Configuration",
+      "assigned":"Dennis",
+      "status":"Completed"
+    },
+    {
+      "id":14,
+      "projectId":3,
+      "name":"Host Configuration",
+      "assigned":"Stella",
+      "status":"In Progress"
+    },
+    {
+      "id":14,
+      "projectId":3,
+      "name":"Software Configuration",
+      "assigned":"Soraqhah",
+      "status":"Pending"
+    },
+    {
+      "id":14,
+      "projectId":4,
+      "name":"Hardware Installation",
+      "assigned":"Mark",
+      "status":"In Progress"
+    },
+    {
+      "id":14,
+      "projectId":5,
+      "name":"Software Installation",
+      "assigned":"Amanda",
+      "status":"Completed"
+    }
+  ]
+}
