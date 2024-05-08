@@ -52,7 +52,6 @@ function Projects() {
       <table>
         <thead>
           <tr>
-            <th>ID</th>
             <th>Name</th>
             <th>Institution</th>
             <th>Implementation Date</th>
@@ -63,7 +62,6 @@ function Projects() {
         <tbody>
           {projects.map((project) => (
             <tr key={project.id}>
-              <td>{project.id}</td>
               <td>{project.name}</td>
               <td>{project.institution}</td>
               <td>{project.implementation_date}</td>
