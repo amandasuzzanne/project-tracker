@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 function CreateTask({ projects }) {
   const [name, setName] = useState('');
   const [assigned, setAssigned] = useState('');
-  const [status, setStatus] = useState('Pending');
+  const [status, setStatus] = useState('pending');
   const [selectedProjectId, setSelectedProjectId] = useState('');
 
   const handleNameChange = (e) => {
@@ -71,9 +71,9 @@ function CreateTask({ projects }) {
         <div>
           <label htmlFor="status">Status:</label>
           <select id="status" value={status} onChange={handleStatusChange}>
-            <option value="Pending">Pending</option>
-            <option value="In Progress">In Progress</option>
-            <option value="Completed">Completed</option>
+            <option value="pending">pending</option>
+            <option value="in progress">in progress</option>
+            <option value="completed">completed</option>
           </select>
         </div>
         <button type="submit">Save</button>
