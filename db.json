@@ -5,49 +5,49 @@
         "name": "Project 1",
         "institution": "Institution 1",
         "implementation_date": "2024-05-10",
-        "status": "Amanda"
+        "status": "current"
       },
       {
         "id": 2,
         "name": "Project 2",
         "institution": "Institution 2",
         "implementation_date": "2024-06-15",
-        "status": "Soraqhah"
+        "status": "current"
       },
       {
         "id": 3,
         "name": "Project 3",
         "institution": "Institution 3",
         "implementation_date": "2024-07-20",
-        "status": "Stella"
+        "status": "current"
       },
       {
         "id":4,
         "name":"project4",
         "institution":"institution4",
         "implementation_date":"2024-08-25",
-        "status":"Dennis"
+        "status":"current"
       },
       {
         "id":5,
         "name":"project5",
         "institution":"institution5",
         "implementation_date":"2024-09-30",
-        "status":"Mark"
+        "status":"current"
       },
       {
         "id":6,
         "name":"project6",
         "institution":"institution6",
         "implementation_date":"2024-10-05",
-        "status":"Amanda"
+        "status":"current"
       },
       {
         "id":7,
         "name":"project7",
         "institution":"institution7",
         "implementation_date":"2024-11-10",
-        "status":"Stella"
+        "status":"current"
       }
     ],
     "tasks": [
@@ -55,98 +55,98 @@
         "id": 1,
         "projectId": 1,
         "name": "Task 1 for Project 1",
-        "assigned": "assigned of Task 1 for Project 1",
+        "assigned": "Amanda",
         "status": "In Progress"
       },
       {
         "id": 2,
         "projectId": 1,
         "name": "Task 2 for Project 1",
-        "assigned": "assigned of Task 2 for Project 1",
+        "assigned": "Soraqhah",
         "status": "Completed"
       },
       {
         "id": 3,
         "projectId": 2,
         "name": "Task 1 for Project 2",
-        "assigned": "assigned of Task 1 for Project 2",
+        "assigned": "Stella",
         "status": "Pending"
       },
       {
         "id": 4,
         "projectId": 2,
         "name": "Task 2 for Project 2",
-        "assigned": "assigned of Task 2 for Project 2",
+        "assigned": "Dennis",
         "status": "In Progress"
       },
       {
         "id": 5,
         "projectId": 3,
         "name": "Task 1 for Project 3",
-        "assigned": "assigned of Task 1 for Project 3",
+        "assigned": "Mark",
         "status": "Pending"
       },
       {
         "id": 6,
         "projectId": 3,
         "name": "Task 2 for Project 3",
-        "assigned": "assigned of Task 2 for Project 3",
+        "assigned": "Amanda",
         "status": "Completed"
       },
       {
         "id": 7,
         "projectId": 4,
         "name": "Task 1 for Project 4",
-        "assigned": "assigned of Task 1 for Project 4",
+        "assigned": "Dennis",
         "status": "In Progress"
       },
       {
         "id": 8,
         "projectId": 4,
         "name": "Task 2 for Project 4",
-        "assigned": "assigned of Task 2 for Project 4",
+        "assigned": "Stella",
         "status": "Completed"
       },
       {
         "id":9,
         "projectId":5,
         "name":"Task 1 for Project 5",
-        "assigned":"assigned of Task 1 for Project 5",
+        "assigned":"Mark",
         "status":"In Progress"
       },
       {
         "id":10,
         "projectId":5,
         "name":"Task 2 for Project 5",
-        "assigned":"assigned of Task 2 for Project 5",
+        "assigned":"Mark",
         "status":"Pending"
       },
       {
         "id":11,
         "projectId":6,
         "name":"Task 1 for Project 6",
-        "assigned":"assigned of Task 1 for Project 6",
+        "assigned":"Amanda",
         "status":"Completed"
       },
       {
         "id":12,
         "projectId":6,
         "name":"Task 2 for Project 6",
-        "assigned":"assigned of Task 2 for Project 6",
+        "assigned":"Dennis",
         "status":"Pending"
       },
       {
         "id":13,
         "projectId":7,
         "name":"Task 1 for Project 7",
-        "assigned":"assigned of Task 1 for Project 7",
+        "assigned":"Stella",
         "status":"In Progress"
       },
       {
         "id":14,
         "projectId":7,
         "name":"Task 2 for Project 7",
-        "assigned":"assigned of Task 2 for Project 7",
+        "assigned":"Amanda",
         "status":"Pending"
       }
     ]
