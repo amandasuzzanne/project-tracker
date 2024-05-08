@@ -36,19 +36,25 @@ function CreateProject({ selectedProject, onProjectUpdate }) {
     if (selectedProject) {
       projectData.id = selectedProject.id;
       try {
-        await fetch(`http://localhost:3000/projects/${selectedProject.id}`, {
+        // Update existing project
+        const response = await fetch(`http://localhost:3000/projects/${selectedProject.id}`, {
           method: 'PATCH',
           headers: {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify(projectData),
         });
-        onProjectUpdate(); // Call onProjectUpdate function for editing
+        if (response.ok) {
+          onProjectUpdate(projectData); // Call onProjectUpdate function with updated project data
+        } else {
+          console.error('Failed to update project');
+        }
       } catch (error) {
         console.error('Error updating project:', error);
       }
     } else {
       try {
+        // Create new project
         const response = await fetch('http://localhost:3000/projects', {
           method: 'POST',
           headers: {
@@ -58,6 +64,8 @@ function CreateProject({ selectedProject, onProjectUpdate }) {
         });
         if (response.ok) {
           // Redirect or show success message
+        } else {
+          console.error('Failed to create project');
         }
       } catch (error) {
         console.error('Error creating project:', error);
