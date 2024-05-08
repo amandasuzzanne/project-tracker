@@ -2,50 +2,50 @@
     "projects": [
       {
         "id": 1,
-        "name": "Project 1",
-        "institution": "Institution 1",
+        "name": "Web Developement",
+        "institution": "Barclays bank",
         "implementation_date": "2024-05-10",
         "status": "current"
       },
       {
         "id": 2,
-        "name": "Project 2",
-        "institution": "Institution 2",
+        "name": "Game Developer",
+        "institution": "Wells Fargo",
         "implementation_date": "2024-06-15",
         "status": "current"
       },
       {
         "id": 3,
-        "name": "Project 3",
-        "institution": "Institution 3",
+        "name": "UI/UX Design",
+        "institution": "Standard Chartered",
         "implementation_date": "2024-07-20",
         "status": "current"
       },
       {
         "id":4,
-        "name":"project4",
-        "institution":"institution4",
+        "name":"Economic Development",
+        "institution":"Goldman Sachs",
         "implementation_date":"2024-08-25",
         "status":"current"
       },
       {
         "id":5,
-        "name":"project5",
-        "institution":"institution5",
+        "name":"Frontend Developer",
+        "institution":"JPMorgan Chase & Co",
         "implementation_date":"2024-09-30",
         "status":"current"
       },
       {
         "id":6,
-        "name":"project6",
-        "institution":"institution6",
+        "name":"System Design",
+        "institution":"BNP Paribas",
         "implementation_date":"2024-10-05",
         "status":"current"
       },
       {
         "id":7,
-        "name":"project7",
-        "institution":"institution7",
+        "name":"Bankend Developer",
+        "institution":"Credit Mutuel",
         "implementation_date":"2024-11-10",
         "status":"current"
       }
@@ -54,100 +54,100 @@
       {
         "id": 1,
         "projectId": 1,
-        "name": "Task 1 for Project 1",
+        "name": "Web Developement",
         "assigned": "Amanda",
         "status": "In Progress"
       },
       {
         "id": 2,
         "projectId": 1,
-        "name": "Task 2 for Project 1",
+        "name": "Frontend Developer",
         "assigned": "Soraqhah",
-        "status": "Completed"
+        "status": "In Progress"
       },
       {
         "id": 3,
         "projectId": 2,
-        "name": "Task 1 for Project 2",
+        "name": "System Design",
         "assigned": "Stella",
         "status": "Pending"
       },
       {
         "id": 4,
         "projectId": 2,
-        "name": "Task 2 for Project 2",
+        "name": "System Design",
         "assigned": "Dennis",
-        "status": "In Progress"
+        "status": "Pending"
       },
       {
         "id": 5,
         "projectId": 3,
-        "name": "Task 1 for Project 3",
+        "name": "Frontend Developer",
         "assigned": "Mark",
-        "status": "Pending"
+        "status": "Completed"
       },
       {
         "id": 6,
         "projectId": 3,
-        "name": "Task 2 for Project 3",
+        "name": "Backend Developer",
         "assigned": "Amanda",
         "status": "Completed"
       },
       {
         "id": 7,
         "projectId": 4,
-        "name": "Task 1 for Project 4",
+        "name": "Deployment",
         "assigned": "Dennis",
         "status": "In Progress"
       },
       {
         "id": 8,
         "projectId": 4,
-        "name": "Task 2 for Project 4",
+        "name": "Backend Developer",
         "assigned": "Stella",
-        "status": "Completed"
+        "status": "In Progress"
       },
       {
         "id":9,
         "projectId":5,
-        "name":"Task 1 for Project 5",
+        "name":"Testing",
         "assigned":"Mark",
-        "status":"In Progress"
+        "status":"Pending"
       },
       {
         "id":10,
         "projectId":5,
-        "name":"Task 2 for Project 5",
-        "assigned":"Mark",
+        "name":"Maintenance & Updates",
+        "assigned":"Amanda",
         "status":"Pending"
       },
       {
         "id":11,
         "projectId":6,
-        "name":"Task 1 for Project 6",
-        "assigned":"Amanda",
+        "name":"Frontend Developer",
+        "assigned":"Stella",
         "status":"Completed"
       },
       {
         "id":12,
         "projectId":6,
-        "name":"Task 2 for Project 6",
+        "name":"Backend Developer",
         "assigned":"Dennis",
-        "status":"Pending"
+        "status":"Completed"
       },
       {
         "id":13,
         "projectId":7,
-        "name":"Task 1 for Project 7",
+        "name":"Web Developer",
         "assigned":"Stella",
         "status":"In Progress"
       },
       {
         "id":14,
         "projectId":7,
-        "name":"Task 2 for Project 7",
+        "name":"Deployment",
         "assigned":"Amanda",
-        "status":"Pending"
+        "status":"In Progress"
       }
     ]
   }
