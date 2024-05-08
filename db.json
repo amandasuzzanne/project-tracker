@@ -1,0 +1,63 @@
+{
+    "projects": [
+      {
+        "id": 1,
+        "name": "Project 1",
+        "institution": "Institution 1",
+        "implementation_date": "2024-05-10",
+        "status": "current"
+      },
+      {
+        "id": 2,
+        "name": "Project 2",
+        "institution": "Institution 2",
+        "implementation_date": "2024-06-15",
+        "status": "current"
+      },
+      {
+        "id": 3,
+        "name": "Project 3",
+        "institution": "Institution 3",
+        "implementation_date": "2024-07-20",
+        "status": "current"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1,
+        "projectId": 1,
+        "name": "Task 1 for Project 1",
+        "description": "Description of Task 1 for Project 1",
+        "status": "In Progress"
+      },
+      {
+        "id": 2,
+        "projectId": 1,
+        "name": "Task 2 for Project 1",
+        "description": "Description of Task 2 for Project 1",
+        "status": "Completed"
+      },
+      {
+        "id": 3,
+        "projectId": 2,
+        "name": "Task 1 for Project 2",
+        "description": "Description of Task 1 for Project 2",
+        "status": "Pending"
+      },
+      {
+        "id": 4,
+        "projectId": 2,
+        "name": "Task 2 for Project 2",
+        "description": "Description of Task 2 for Project 2",
+        "status": "In Progress"
+      },
+      {
+        "id": 5,
+        "projectId": 3,
+        "name": "Task 1 for Project 3",
+        "description": "Description of Task 1 for Project 3",
+        "status": "Pending"
+      }
+    ]
+  }
+  
