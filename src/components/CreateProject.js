@@ -4,6 +4,8 @@ function CreateProject({ selectedProject, onProjectUpdate }) {
   const [name, setName] = useState('');
   const [institution, setInstitution] = useState('');
   const [implementationDate, setImplementationDate] = useState('');
+  const [status, setStatus] = useState('pending');
+
 
   useEffect(() => {
     if (selectedProject) {
@@ -23,6 +25,10 @@ function CreateProject({ selectedProject, onProjectUpdate }) {
 
   const handleImplementationDateChange = (e) => {
     setImplementationDate(e.target.value);
+  };
+
+  const handleStatusChange = (e) => {
+    setStatus(e.target.value);
   };
 
   const handleSubmit = async (e) => {
@@ -88,6 +94,14 @@ function CreateProject({ selectedProject, onProjectUpdate }) {
         <div>
           <label htmlFor="implementationDate">Implementation Date:</label>
           <input type="date" id="implementationDate" value={implementationDate} onChange={handleImplementationDateChange} />
+        </div>
+        <div>
+          <label htmlFor="status">Status:</label>
+          <select id="status" value={status} onChange={handleStatusChange}>
+            <option value="pending">pending</option>
+            <option value="in progress">in progress</option>
+            <option value="completed">completed</option>
+          </select>
         </div>
         <button type="submit">{selectedProject ? 'Update' : 'Save'}</button>
       </form>
