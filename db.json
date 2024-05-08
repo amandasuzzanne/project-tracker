@@ -5,49 +5,49 @@
         "name": "Project 1",
         "institution": "Institution 1",
         "implementation_date": "2024-05-10",
-        "status": "current"
+        "status": "Amanda"
       },
       {
         "id": 2,
         "name": "Project 2",
         "institution": "Institution 2",
         "implementation_date": "2024-06-15",
-        "status": "current"
+        "status": "Soraqhah"
       },
       {
         "id": 3,
         "name": "Project 3",
         "institution": "Institution 3",
         "implementation_date": "2024-07-20",
-        "status": "current"
+        "status": "Stella"
       },
       {
         "id":4,
         "name":"project4",
         "institution":"institution4",
         "implementation_date":"2024-08-25",
-        "status":"current"
+        "status":"Dennis"
       },
       {
         "id":5,
         "name":"project5",
         "institution":"institution5",
         "implementation_date":"2024-09-30",
-        "status":"current"
+        "status":"Mark"
       },
       {
         "id":6,
         "name":"project6",
         "institution":"institution6",
         "implementation_date":"2024-10-05",
-        "status":"current"
+        "status":"Amanda"
       },
       {
         "id":7,
         "name":"project7",
         "institution":"institution7",
         "implementation_date":"2024-11-10",
-        "status":"current"
+        "status":"Stella"
       }
     ],
     "tasks": [
