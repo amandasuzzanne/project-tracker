@@ -65,6 +65,7 @@ function Tasks() {
 
   return (
     <div>
+      <CreateTask projects={projects} editingTask={editingTask} onTaskUpdated={handleTaskUpdated} />
       <div className="container">
         <h1>Tasks</h1>
         <table>
@@ -92,7 +93,6 @@ function Tasks() {
             ))}
           </tbody>
         </table>
-        <CreateTask projects={projects} editingTask={editingTask} onTaskUpdated={handleTaskUpdated} />
       </div>
     </div>
   );
