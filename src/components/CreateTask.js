@@ -6,7 +6,6 @@ function CreateTask({ projects, editingTask, onTaskUpdated }) {
   const [status, setStatus] = useState('pending');
   const [selectedProjectId, setSelectedProjectId] = useState('');
 
-
   useEffect(() => {
     if (editingTask) {
       setName(editingTask.name);
@@ -45,10 +44,11 @@ function CreateTask({ projects, editingTask, onTaskUpdated }) {
         },
         body: JSON.stringify({ name, assigned, status, projectId: selectedProjectId }),
       });
+
       if (response.ok) {
-        // Redirect or show on success
-        console.log('Task created successfully');
+        // Trigger the update of the task list
         onTaskUpdated();
+        console.log('Task created successfully');
       } else {
         console.log("Failed to create/update task");
       }
@@ -56,8 +56,6 @@ function CreateTask({ projects, editingTask, onTaskUpdated }) {
       console.error('Error encountered:', error);
     }
   }
-
-
 
   return (
     <div>
