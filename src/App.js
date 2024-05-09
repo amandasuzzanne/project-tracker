@@ -4,6 +4,7 @@ import Home from './components/Home';
 import Projects from './components/Projects';
 import Tasks from './components/Tasks';
 import Reports from './components/Reports';
+import "./App.css";
 
 function App() {
   return (
