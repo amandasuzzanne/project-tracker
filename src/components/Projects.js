@@ -44,7 +44,14 @@ function Projects() {
   };
 
   const handleProjectUpdate = async (updatedProject) => {
-    // Implementation remains the same
+    // Fetch projects again to update the list
+    try {
+      const response = await fetch('http://localhost:3000/projects');
+      const data = await response.json();
+      setProjects(data);
+    } catch (error) {
+      console.error('Error fetching projects:', error);
+    }
   };
 
   return (

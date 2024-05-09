@@ -6,12 +6,12 @@ function CreateProject({ selectedProject, onProjectUpdate }) {
   const [implementationDate, setImplementationDate] = useState('');
   const [status, setStatus] = useState('pending');
 
-
   useEffect(() => {
     if (selectedProject) {
       setName(selectedProject.name);
       setInstitution(selectedProject.institution);
       setImplementationDate(selectedProject.implementation_date);
+      setStatus(selectedProject.status);
     }
   }, [selectedProject]);
 
@@ -32,50 +32,45 @@ function CreateProject({ selectedProject, onProjectUpdate }) {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault(); // Prevent default form submission behavior
+
     const projectData = {
       name,
       institution,
       implementation_date: implementationDate,
-      status: 'current',
+      status,
     };
+
     if (selectedProject) {
       projectData.id = selectedProject.id;
-      try {
-        // Update existing project
-        const response = await fetch(`http://localhost:3000/projects/${selectedProject.id}`, {
-          method: 'PATCH',
+    }
+
+    try {
+      const response = await fetch(
+        selectedProject ? `http://localhost:3000/projects/${selectedProject.id}` : 'http://localhost:3000/projects',
+        {
+          method: selectedProject ? 'PATCH' : 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify(projectData),
-        });
-        if (response.ok) {
-          onProjectUpdate(projectData); // Call onProjectUpdate function with updated project data
-        } else {
-          console.error('Failed to update project');
         }
-      } catch (error) {
-        console.error('Error updating project:', error);
+      );
+
+      if (response.ok) {
+        // Call onProjectUpdate function with updated project data
+        onProjectUpdate(projectData);
+
+        // Clear form fields
+        setName('');
+        setInstitution('');
+        setImplementationDate('');
+        setStatus('pending');
+      } else {
+        console.error(selectedProject ? 'Failed to update project' : 'Failed to create project');
       }
-    } else {
-      try {
-        // Create new project
-        const response = await fetch('http://localhost:3000/projects', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(projectData),
-        });
-        if (response.ok) {
-          // Redirect or show success message
-        } else {
-          console.error('Failed to create project');
-        }
-      } catch (error) {
-        console.error('Error creating project:', error);
-      }
+    } catch (error) {
+      console.error(selectedProject ? 'Error updating project:' : 'Error creating project:', error);
     }
   };
 
