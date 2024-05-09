@@ -24,7 +24,7 @@ table th,table td{
 }
 table th{
   background-color: black;
-  color: whitesmoke;
+  color: black;
   text-align: left;
 }
 table tr:nth-child(even){
