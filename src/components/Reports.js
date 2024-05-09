@@ -42,7 +42,7 @@ function Report() {
   console.log('Tasks:', tasks);
 
   return (
-    <div>
+    <div className="container">
       <h1>Completed Projects Report</h1>
       <table>
         <thead>
