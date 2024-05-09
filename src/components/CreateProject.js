@@ -12,12 +12,6 @@ function CreateProject({ selectedProject, onProjectUpdate }) {
       setInstitution(selectedProject.institution);
       setImplementationDate(selectedProject.implementation_date);
       setStatus(selectedProject.status);
-    } else {
-      // Clear form fields when creating a new project
-      setName('');
-      setInstitution('');
-      setImplementationDate('');
-      setStatus('pending');
     }
   }, [selectedProject]);
 
@@ -52,18 +46,22 @@ function CreateProject({ selectedProject, onProjectUpdate }) {
     }
 
     try {
-      const response = await fetch(selectedProject ? `http://localhost:3000/projects/${selectedProject.id}` : 'http://localhost:3000/projects', {
-        method: selectedProject ? 'PATCH' : 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(projectData),
-      });
-      
+      const response = await fetch(
+        selectedProject ? `http://localhost:3000/projects/${selectedProject.id}` : 'http://localhost:3000/projects',
+        {
+          method: selectedProject ? 'PATCH' : 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(projectData),
+        }
+      );
+
       if (response.ok) {
-        const data = await response.json();
-        onProjectUpdate(data); // Call onProjectUpdate function with updated project data
-        // Clear form fields after successful submission
+        // Call onProjectUpdate function with updated project data
+        onProjectUpdate(projectData);
+
+        // Clear form fields
         setName('');
         setInstitution('');
         setImplementationDate('');
@@ -72,7 +70,7 @@ function CreateProject({ selectedProject, onProjectUpdate }) {
         console.error(selectedProject ? 'Failed to update project' : 'Failed to create project');
       }
     } catch (error) {
-      console.error('Error:', error);
+      console.error(selectedProject ? 'Error updating project:' : 'Error creating project:', error);
     }
   };
 
