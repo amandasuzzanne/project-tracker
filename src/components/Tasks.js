@@ -4,18 +4,19 @@ import CreateTask from './CreateTask';
 function Tasks() {
   const [tasks, setTasks] = useState([]);
   const [projects, setProjects] = useState([]);
+  const [editingTask, setEditingTask] = useState(null);
+
+  const fetchTasks = async () => {
+    try {
+      const response = await fetch('http://localhost:3000/tasks');
+      const data = await response.json();
+      setTasks(data);
+    } catch (error) {
+      console.error('Error fetching tasks:', error);
+    }
+  };
 
   useEffect(() => {
-    const fetchTasks = async () => {
-      try {
-        const response = await fetch('http://localhost:3000/tasks');
-        const data = await response.json();
-        setTasks(data);
-      } catch (error) {
-        console.error('Error fetching tasks:', error);
-      }
-    };
-
     const fetchProjects = async () => {
       try {
         const response = await fetch('http://localhost:3000/projects');
@@ -31,19 +32,24 @@ function Tasks() {
   }, []);
 
   const handleEditTask = (taskId) => {
-    // Logic to handle editing task
     console.log('Editing task:', taskId);
+    const taskToEdit = tasks.find((task) => task.id === taskId);
+    setEditingTask(taskToEdit);
+  };
+
+  const handleTaskUpdated = async () => {
+    await fetchTasks();
+    setEditingTask(null);
   };
 
   const handleDeleteTask = async (taskId) => {
-    // Logic to handle deleting task
     console.log('Deleting task:', taskId);
     try {
       const response = await fetch(`http://localhost:3000/tasks/${taskId}`, {
         method: 'DELETE',
       });
       if (response.ok) {
-        setTasks((prevTasks) => prevTasks.filter((task) => task.id !== taskId));
+        await fetchTasks(); // Refresh tasks list after deleting a task
       } else {
         console.error('Failed to delete task');
       }
@@ -86,7 +92,7 @@ function Tasks() {
             ))}
           </tbody>
         </table>
-        <CreateTask projects={projects} />
+        <CreateTask projects={projects} editingTask={editingTask} onTaskUpdated={handleTaskUpdated} />
       </div>
     </div>
   );
