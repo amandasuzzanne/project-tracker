@@ -5,18 +5,19 @@ import "./Tables.css"
 function Projects() {
   const [projects, setProjects] = useState([]);
   const [selectedProject, setSelectedProject] = useState(null);
+  const [formValues, setFormValues] = useState({ name: '', institution: '', implementation_date: '', status: '' });
+
+  const fetchProjects = async () => {
+    try {
+      const response = await fetch('http://localhost:3000/projects');
+      const data = await response.json();
+      setProjects(data);
+    } catch (error) {
+      console.error('Error fetching projects:', error);
+    }
+  };
 
   useEffect(() => {
-    const fetchProjects = async () => {
-      try {
-        const response = await fetch('http://localhost:3000/projects');
-        const data = await response.json();
-        setProjects(data);
-      } catch (error) {
-        console.error('Error fetching projects:', error);
-      }
-    };
-
     fetchProjects();
   }, []);
 
@@ -44,7 +45,43 @@ function Projects() {
   };
 
   const handleProjectUpdate = async (updatedProject) => {
-    // Implementation remains the same
+    try {
+      if (updatedProject.id) {
+        // If project id exists, it's an update
+        const response = await fetch(`http://localhost:3000/projects/${updatedProject.id}`, {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(updatedProject),
+        });
+        if (response.ok) {
+          console.log('Project updated successfully');
+          // Fetch updated projects data
+          fetchProjects();
+          // Reset form fields
+          setFormValues({ name: '', institution: '', implementation_date: '', status: '' });
+        }
+      } else {
+        // If project id does not exist, it's an addition
+        const response = await fetch('http://localhost:3000/projects', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(updatedProject),
+        });
+        if (response.ok) {
+          console.log('Project added successfully');
+          // Fetch updated projects data
+          fetchProjects();
+          // Reset form fields
+          setFormValues({ name: '', institution: '', implementation_date: '', status: '' });
+        }
+      }
+    } catch (error) {
+      console.error('Error updating/adding project:', error);
+    }
   };
 
   return (
@@ -76,7 +113,7 @@ function Projects() {
             ))}
           </tbody>
         </table>
-        <CreateProject selectedProject={selectedProject} onProjectUpdate={handleProjectUpdate} />
+        <CreateProject selectedProject={selectedProject} onProjectUpdate={handleProjectUpdate} formValues={formValues} setFormValues={setFormValues} />
       </div>
     </div>
   );
