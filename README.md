@@ -1,3 +1,34 @@
+# Project Tracker
+
+## Collaborators
+Group 3 SDFT-09 SILVERBACK:
+1. amandasuzzane(Amanda)
+2. dennoxkabugi(Dennis)
+3. soraqah(Soraqah)
+4. M-st3lla(Stella)
+5. flakes(Mark)
+
+## Description
+Project Tracker is an easy-to-operate Web App that is designed to enable users:
+
+1. Add,view,update and delete projects
+2. Add,view,update and delete tasks based on a selected project
+3. View a report of all the completed projects
+
+## Technologies Used
+1. React: Has been used as a JavaScript framework to incorporate the dynamic functionality of the webpage
+2. HTML : Has been used to achieve the general layout of the Application
+3. CSS : Has been used to achieve the visual represantation and general styling of the webpage 
+4. Bootstrap: Has been used as a framework to make styling easier
+
+## Links
+
+
+## License
+Licensed under the MIT License.
+Get more info here: https://vulert.com/blog/the-mit-license-explained-what-you-need-to-know/
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
