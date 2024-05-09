@@ -48,33 +48,35 @@ function Projects() {
 
   return (
     <div>
-      <h1>Projects</h1>
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Institution</th>
-            <th>Implementation Date</th>
-            <th>Status</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          {projects.map((project) => (
-            <tr key={project.id}>
-              <td>{project.name}</td>
-              <td>{project.institution}</td>
-              <td>{project.implementation_date}</td>
-              <td>{project.status}</td>
-              <td>
-                <button onClick={() => handleEditProject(project.id)}>Edit</button>
-                <button onClick={() => handleDeleteProject(project.id)}>Delete</button>
-              </td>
+      <div className="container">
+        <h1>Projects</h1>
+        <table className="response-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Institution</th>
+              <th>Implementation Date</th>
+              <th>Status</th>
+              <th>Action</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
-      <CreateProject selectedProject={selectedProject} onProjectUpdate={handleProjectUpdate} />
+          </thead>
+          <tbody>
+            {projects.map((project) => (
+              <tr key={project.id}>
+                <td>{project.name}</td>
+                <td>{project.institution}</td>
+                <td>{project.implementation_date}</td>
+                <td>{project.status}</td>
+                <td>
+                  <button onClick={() => handleEditProject(project.id)}>Edit</button>
+                  <button onClick={() => handleDeleteProject(project.id)}>Delete</button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        <CreateProject selectedProject={selectedProject} onProjectUpdate={handleProjectUpdate} />
+      </div>
     </div>
   );
 }
