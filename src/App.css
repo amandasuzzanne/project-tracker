@@ -6,7 +6,7 @@
 h1{
   font-size: 36px;
   margin-bottom: 20px;
-  color: aqua;
+  color: black;
 }
 p{
   font-size: 18px;
@@ -19,12 +19,12 @@ table{
   border-collapse:collapse
 }
 table th,table td{
-  border: 1px solid white;
+  border: 1px solid black;
   padding: 10px;
 }
 table th{
   background-color: black;
-  color: aqua;
+  color: whitesmoke;
   text-align: left;
 }
 table tr:nth-child(even){
@@ -96,5 +96,5 @@ button[type="submit"]:hover{
   align-items: center;
 }
 body{
- background-color: black;
+ background-color:rgb(197, 193, 187);
 }
