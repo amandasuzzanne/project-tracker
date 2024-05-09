@@ -55,6 +55,7 @@ function Projects() {
 
   return (
     <div>
+      <CreateProject selectedProject={selectedProject} onProjectUpdate={handleProjectUpdate} />
       <div className="container">
         <h1>Projects</h1>
         <table className="response-table">
@@ -82,7 +83,6 @@ function Projects() {
             ))}
           </tbody>
         </table>
-        <CreateProject selectedProject={selectedProject} onProjectUpdate={handleProjectUpdate} />
       </div>
     </div>
   );
