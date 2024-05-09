@@ -49,7 +49,7 @@ function Tasks() {
         method: 'DELETE',
       });
       if (response.ok) {
-        await fetchTasks();
+        await fetchTasks(); // Refresh tasks list after deleting a task
       } else {
         console.error('Failed to delete task');
       }
