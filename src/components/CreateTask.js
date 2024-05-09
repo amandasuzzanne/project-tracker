@@ -1,10 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-function CreateTask({ projects }) {
+function CreateTask({ projects, editingTask, onTaskUpdated }) {
   const [name, setName] = useState('');
   const [assigned, setAssigned] = useState('');
   const [status, setStatus] = useState('pending');
   const [selectedProjectId, setSelectedProjectId] = useState('');
+
+
+  useEffect(() => {
+    if (editingTask) {
+      setName(editingTask.name);
+      setAssigned(editingTask.assigned);
+      setStatus(editingTask.status);
+      setSelectedProjectId(editingTask.projectId);
+    }
+  }, [editingTask]);
 
   const handleNameChange = (e) => {
     setName(e.target.value);
@@ -25,27 +35,35 @@ function CreateTask({ projects }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`http://localhost:3000/projects/${selectedProjectId}/tasks`, {
-        method: 'POST',
+      const method = editingTask ? 'PUT' : 'POST';
+      const url = editingTask ? `http://localhost:3000/tasks/${editingTask.id}` : `http://localhost:3000/projects/${selectedProjectId}/tasks`;
+
+      const response = await fetch(url, {
+        method,
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ name, assigned, status }),
+        body: JSON.stringify({ name, assigned, status, projectId: selectedProjectId }),
       });
       if (response.ok) {
-        // Redirect or show success message
+        // Redirect or show on success
         console.log('Task created successfully');
+        onTaskUpdated();
+      } else {
+        console.log("Failed to create/update task");
       }
     } catch (error) {
-      console.error('Error creating task:', error);
+      console.error('Error encountered:', error);
     }
-  };
+  }
+
+
 
   return (
     <div>
-      <h1>Create Task</h1>
+      <h1>{editingTask ? 'Edit Task' : 'Create Task'}</h1>
       <form onSubmit={handleSubmit}>
-      <div>
+        <div>
           <label htmlFor="projectSelect">Select Project:</label>
           <select id="projectSelect" value={selectedProjectId} onChange={handleProjectChange}>
             <option value="">Select a project</option>
@@ -76,7 +94,7 @@ function CreateTask({ projects }) {
             <option value="completed">completed</option>
           </select>
         </div>
-        <button type="submit">Save</button>
+        <button type="submit">{editingTask ? 'Update' : 'Save'}</button>
       </form>
     </div>
   );
