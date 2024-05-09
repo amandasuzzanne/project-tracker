@@ -54,7 +54,7 @@ function Tasks() {
 
   const getProjectName = (projectId) => {
     const project = projects.find((project) => project.id === projectId);
-    return project ? project.name : 'Unknown';
+    return project ? project.name : '';
   };
 
   return (
