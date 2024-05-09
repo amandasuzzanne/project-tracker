@@ -18,7 +18,7 @@ function Home() {
   }, []);
 
   return (
-    <div>
+    <div className="container">
       <h1>Projects</h1>
       <table>
         <thead>
