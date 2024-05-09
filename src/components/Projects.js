@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import CreateProject from './CreateProject';
-import "./Tables.css"
 
 function Projects() {
   const [projects, setProjects] = useState([]);
