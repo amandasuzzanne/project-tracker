@@ -59,33 +59,35 @@ function Tasks() {
 
   return (
     <div>
-      <h1>Tasks</h1>
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Assigned</th>
-            <th>Status</th>
-            <th>Project</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {tasks.map((task) => (
-            <tr key={task.id}>
-              <td>{task.name}</td>
-              <td>{task.assigned}</td>
-              <td>{task.status}</td>
-              <td>{getProjectName(task.projectId)}</td>
-              <td>
-                <button onClick={() => handleEditTask(task.id)}>Edit</button>
-                <button onClick={() => handleDeleteTask(task.id)}>Delete</button>
-              </td>
+      <div className="container">
+        <h1>Tasks</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Assigned</th>
+              <th>Status</th>
+              <th>Project</th>
+              <th>Actions</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
-      <CreateTask projects={projects} />
+          </thead>
+          <tbody>
+            {tasks.map((task) => (
+              <tr key={task.id}>
+                <td>{task.name}</td>
+                <td>{task.assigned}</td>
+                <td>{task.status}</td>
+                <td>{getProjectName(task.projectId)}</td>
+                <td>
+                  <button onClick={() => handleEditTask(task.id)}>Edit</button>
+                  <button onClick={() => handleDeleteTask(task.id)}>Delete</button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        <CreateTask projects={projects} />
+      </div>
     </div>
   );
 }
