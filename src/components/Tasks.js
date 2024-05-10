@@ -38,7 +38,7 @@ function Tasks() {
   };
 
   const handleTaskUpdated = async () => {
-    await fetchTasks();
+    await fetchTasks(); // Refresh tasks list after creating or updating a task
     setEditingTask(null);
   };
 
